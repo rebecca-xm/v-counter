@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#events {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 3rem auto;
+  padding: 1rem;
+  text-align: center;
+  width: 90%;
+  max-width: 40rem;
+}
+
+#events h2 {
+  font-size: 2rem;
+  color: #4f73c0;
+  margin: 0 0 1rem 0;
+}
+
+#events p {
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 1px solid #4f73c0;
+  color: #4f73c0;
+  padding: 0.5rem;
+}
+
+#events button {
+  font: inherit;
+  cursor: pointer;
+  color: #4f73c0;
+  border: 1px solid #4f73c0;
+  padding: 0.05rem 1rem;
+  margin: 0 1rem;
+}
+
+#events button:hover,
+#events button:active {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+}
