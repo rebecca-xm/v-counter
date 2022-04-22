@@ -10,6 +10,14 @@ const app = Vue.createApp({
     },
     reduce() {
       this.counter--
+    },
+    addFive(num) {
+      // this.counter = this.counter + 5
+      this.counter = this.counter + num
+    },
+    reduceFive(num) {
+      // this.counter = this.counter - 5
+      this.counter = this.counter - num
     }
   }
 });
