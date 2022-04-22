@@ -14,11 +14,14 @@
 <body>
   <section id="events">
     <h2>Counter</h2>
-    <button v-on:click="add">Add</button>
-    <button v-on:click="reduce">Subtract</button>
+    <!-- <button v-on:click="add">Add</button>
+    <button v-on:click="reduce">Subtract</button> -->
     <button v-on:click="addFive(5)">Add +5</button>
     <button v-on:click="reduceFive(5)">Subtract -5</button>
     <p>Result: {{ counter }}</p>
+    <h2>Write Something</h2>
+    <input v-on:input="outputText" type="text">
+    <p>Your Text: {{ text }}</p>
   </section>
 </body>
 
