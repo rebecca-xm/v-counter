@@ -14,16 +14,16 @@
 <body>
   <section id="events">
     <h2>Counter</h2>
-    <!-- <button v-on:click="add">Add</button>
-    <button v-on:click="reduce">Subtract</button> -->
     <button v-on:click="addFive(5)">Add +5</button>
     <button v-on:click="reduceFive(5)">Subtract -5</button>
     <p v-once>Starting Counter: {{ counter }}</p>
     <p>Result: {{ counter }}</p>
     <h2>Write Something</h2>
-    <input v-on:input="outputText" v-on:keyup.enter="confirmText" type="text">
-    <!-- <p>Your Text: {{ text }}</p> -->
-    <p>Your Text: {{ confirmedText }}</p>
+    <!-- <input v-bind:value="confirmedText" v-on:input="outputText" v-on:keyup.enter="confirmText" type="text">-->
+    <input v-model="text" type="text">
+    <!-- v-model="dato da gestire" altro non è che una shortcut per v-bind:value e v-on:input -->
+    <button v-on:click="resetText">Reset Text</button>
+    <p>Your Text: {{ text }}</p>
     <form v-on:submit.prevent="submitForm">
       <input type="text">
       <button>Submit</button>
