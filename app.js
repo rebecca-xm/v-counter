@@ -30,6 +30,9 @@ const app = Vue.createApp({
     },
     confirmText() {
       this.confirmedText = this.text
+    },
+    resetText() {
+      this.text = ''
     }
   }
 });
