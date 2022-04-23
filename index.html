@@ -18,10 +18,16 @@
     <button v-on:click="reduce">Subtract</button> -->
     <button v-on:click="addFive(5)">Add +5</button>
     <button v-on:click="reduceFive(5)">Subtract -5</button>
+    <p v-once>Starting Counter: {{ counter }}</p>
     <p>Result: {{ counter }}</p>
     <h2>Write Something</h2>
-    <input v-on:input="outputText" type="text">
-    <p>Your Text: {{ text }}</p>
+    <input v-on:input="outputText" v-on:keyup.enter="confirmText" type="text">
+    <!-- <p>Your Text: {{ text }}</p> -->
+    <p>Your Text: {{ confirmedText }}</p>
+    <form v-on:submit.prevent="submitForm">
+      <input type="text">
+      <button>Submit</button>
+    </form>
   </section>
 </body>
 

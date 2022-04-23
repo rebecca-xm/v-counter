@@ -2,7 +2,8 @@ const app = Vue.createApp({
   data() {
     return {
       counter: 0,
-      text: ''
+      text: '',
+      confirmedText: ''
     };
   },
   methods: {
@@ -22,11 +23,17 @@ const app = Vue.createApp({
     },
     outputText(e) {
       this.text = e.target.value
-      // qualora fosse necessario passare un secondo parametro alla funzione
-      // e (event) andrebbe richiamato con la parola chiave $event nella parte HTML
-      // es => v-on:input="outputText($event, 'altro argomento')"
+    },
+    submitForm(e) {
+      alert('Submitted!')
+      // e.preventDefault()
+    },
+    confirmText() {
+      this.confirmedText = this.text
     }
   }
 });
 
 app.mount('#events');
+
+//* https://vuejs.org/guide/essentials/event-handling.html

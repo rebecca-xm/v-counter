@@ -46,3 +46,13 @@ body {
 #events button:active {
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
+
+#events input {
+  font: inherit;
+  border: 1px solid #ccc;
+}
+
+#events input:focus {
+  outline: none;
+  border-color: #4f73c0;
+}
