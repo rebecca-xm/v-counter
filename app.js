@@ -34,9 +34,29 @@ const app = Vue.createApp({
     resetText() {
       this.text = ''
     }
+  },
+  computed: {
+    // confirmedtext() {
+    //   if (this.text === '') {
+    //     return ''
+    //   } else {
+    //     return this.text + ' ' + 'is being computed by Vue'
+    //   }
+    // }
+  },
+  watch: {
+    text(value) {
+      if (value === '') {
+        this.confirmedText = ''
+      } else {
+        this.confirmedText = value + ' ' + 'is being watched by Vue'
+      }
+    }
   }
 });
 
 app.mount('#events');
 
 //* https://vuejs.org/guide/essentials/event-handling.html
+//* https://vuejs.org/guide/essentials/computed.html
+//* https://vuejs.org/guide/essentials/watchers.html

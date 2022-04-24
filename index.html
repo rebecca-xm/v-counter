@@ -23,7 +23,7 @@
     <input v-model="text" type="text">
     <!-- v-model="dato da gestire" altro non è che una shortcut per v-bind:value e v-on:input -->
     <button v-on:click="resetText">Reset Text</button>
-    <p>Your Text: {{ text }}</p>
+    <p>Your Text: {{ confirmedText }}</p>
     <form v-on:submit.prevent="submitForm">
       <input type="text">
       <button>Submit</button>
