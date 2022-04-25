@@ -34,6 +34,7 @@ const app = Vue.createApp({
     },
     resetText() {
       this.text = ''
+      this.altText = ''
     }
   },
   computed: {
