@@ -21,13 +21,14 @@
     <h2>Write Something</h2>
     <!-- <input v-bind:value="confirmedText" v-on:input="outputText" v-on:keyup.enter="confirmText" type="text">-->
     <input v-model="text" type="text">
+    <input v-model="altText" type="text">
     <!-- v-model="dato da gestire" altro non è che una shortcut per v-bind:value e v-on:input -->
     <button v-on:click="resetText">Reset Text</button>
-    <p>Your Text: {{ confirmedText }}</p>
-    <form v-on:submit.prevent="submitForm">
+    <p>Your Text: {{ confirmedtext }}</p>
+    <!-- <form v-on:submit.prevent="submitForm">
       <input type="text">
       <button>Submit</button>
-    </form>
+    </form> -->
   </section>
 </body>
 

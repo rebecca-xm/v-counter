@@ -3,7 +3,8 @@ const app = Vue.createApp({
     return {
       counter: 0,
       text: '',
-      confirmedText: ''
+      altText: '',
+      confirmedText: '',
     };
   },
   methods: {
@@ -43,13 +44,36 @@ const app = Vue.createApp({
     //     return this.text + ' ' + 'is being computed by Vue'
     //   }
     // }
+    confirmedtext() {
+      if (this.text === '' || this.altText === '') {
+        return ''
+      } else {
+        return this.text + ' ' + this.altText
+      }
+    }
   },
   watch: {
-    text(value) {
-      if (value === '') {
-        this.confirmedText = ''
-      } else {
-        this.confirmedText = value + ' ' + 'is being watched by Vue'
+    // text(value) {
+    //   if (value === '') {
+    //     this.confirmedText = ''
+    //   } else {
+    //     // this.confirmedText = value + ' ' + 'is being watched by Vue'
+    //     this.confirmedText = value + ' ' + this.altText
+    //   }
+    // },
+    // altText(value) {
+    //   if (value === '') {
+    //     this.confirmedText = ''
+    //   } else {
+    //     this.confirmedText = this.text + ' ' + value
+    //   }
+    // }
+    counter(value) {
+      if (value > 100) {
+        const that = this;
+        setTimeout(() => {
+          that.counter = 0;
+        }, 1000);
       }
     }
   }
